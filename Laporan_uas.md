@@ -242,8 +242,8 @@ Evaluasi model dilakukan menggunakan **Validation Set** yang tidak digunakan sec
 
 | Nama Model | Accuracy | Precision | Recall | F1-Score | Status |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **CNN** | xx.xx% | x.xxx | x.xxx | x.xxx | Diisi setelah pengujian |
-| **MobileNetV2** | xx.xx% | x.xxx | x.xxx | x.xxx | Diisi setelah pengujian |
+| **CNN** | 92.05% | 0.923 | 0.921 | 0.897 | Diisi setelah pengujian |
+| **MobileNetV2** | 96.52% | 0.773 | 0.762 | x.xxx | Diisi setelah pengujian |
 
 Tabel di atas menyajikan hasil evaluasi kedua model berdasarkan metrik **Accuracy**, **Precision**, **Recall**, dan **F1-Score**. Nilai-nilai tersebut digunakan sebagai dasar untuk membandingkan performa model **CNN** dan **MobileNetV2** dalam melakukan klasifikasi penyakit daun tomat. Model yang memperoleh nilai evaluasi lebih tinggi menunjukkan kemampuan klasifikasi yang lebih baik terhadap data validasi.
 
@@ -310,18 +310,3 @@ Melalui Confusion Matrix dapat diketahui kelas mana yang memiliki tingkat kesala
 ---
 ## 10. Lampiran 
 
-<img width="704" height="419" alt="image" src="https://github.com/user-attachments/assets/88b79415-d493-49ed-9a05-f2b035b70ace" />
-
-
-<img width="536" height="393" alt="image" src="https://github.com/user-attachments/assets/45cac68f-8406-47c5-858b-46f902a243a4" />
-
----
-
-HASIL DATASET MENTAH YANG DI OLAH:
-yang dimana dataset tersebut adalah padi yang terkena penyakit tungro
-
-
-<img width="473" height="427" alt="image" src="https://github.com/user-attachments/assets/224b104a-7b07-4d6c-bf9d-aec153253248" />
-
-
-<img width="989" height="489" alt="image" src="https://github.com/user-attachments/assets/13a24017-50cc-4725-87d4-11d04add41b3" />
