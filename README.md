@@ -93,20 +93,6 @@ UAS-KecerdasanBuatan/
 
 ---
 
-# 💻 Teknologi yang Digunakan
-
-- Python
-- TensorFlow
-- Keras
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-learn
-- OpenCV
-- Google Colab
-
----
-
 # 🔬 Metodologi
 
 Tahapan penelitian yang dilakukan yaitu:
