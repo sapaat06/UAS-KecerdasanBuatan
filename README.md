@@ -1,4 +1,4 @@
-# 🍅 UAS KECERDASAN BUATAN
+# UAS KECERDASAN BUATAN
 # Deteksi Penyakit Daun Tomat Menggunakan Convolutional Neural Network (CNN) dan MobileNetV2
 
 ---
@@ -162,8 +162,8 @@ Model dievaluasi menggunakan beberapa metrik:
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |--------|----------|-----------|--------|----------|
-| CNN | - | - | - | - |
-| MobileNetV2 | - | - | - | - |
+| CNN | 92.05% | 0.923 | 0.921 | 0.897 |
+| MobileNetV2 | 96.52% | 0.773 | 0.762 | 0.751 |
 
 ---
 
