@@ -240,10 +240,10 @@ Evaluasi model dilakukan menggunakan **Validation Set** yang tidak digunakan sec
 
 ## 1. Tabel Komparasi Metrik
 
-| Nama Model | Accuracy | Precision | Recall | F1-Score | Status |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **CNN** | 92.05% | 0.923 | 0.921 | 0.897 | Diisi setelah pengujian |
-| **MobileNetV2** | 96.52% | 0.773 | 0.762 | x.xxx | Diisi setelah pengujian |
+| Nama Model | Accuracy | Precision | Recall | F1-Score | 
+| :--- | :---: | :---: | :---: | :---: |
+| **CNN** | 92.05% | 0.923 | 0.921 | 0.897 | 
+| **MobileNetV2** | 96.52% | 0.773 | 0.762 | 0.751 | 
 
 Tabel di atas menyajikan hasil evaluasi kedua model berdasarkan metrik **Accuracy**, **Precision**, **Recall**, dan **F1-Score**. Nilai-nilai tersebut digunakan sebagai dasar untuk membandingkan performa model **CNN** dan **MobileNetV2** dalam melakukan klasifikasi penyakit daun tomat. Model yang memperoleh nilai evaluasi lebih tinggi menunjukkan kemampuan klasifikasi yang lebih baik terhadap data validasi.
 
