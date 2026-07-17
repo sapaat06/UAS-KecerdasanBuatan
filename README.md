@@ -43,28 +43,36 @@ Penyakit pada daun tomat menjadi salah satu penyebab utama menurunnya hasil pane
 
 # 📂 Dataset
 
-Dataset yang digunakan berasal dari **PlantVillage Dataset**.
+Dataset yang digunakan pada penelitian ini adalah **Tomato Disease Multiple Sources** yang tersedia di Kaggle.
 
-**Kelas Dataset**
+Dataset ini berisi lebih dari **20.000 citra daun tomat** yang terdiri atas **10 kelas penyakit** dan **1 kelas daun sehat (Healthy)**. Dataset merupakan gabungan dari beberapa sumber, termasuk PlantVillage dan citra daun tomat yang diambil di lingkungan nyata (in-the-wild), serta telah melalui proses augmentasi sehingga memiliki variasi data yang lebih beragam. :contentReference[oaicite:0]{index=0}
+
+Pada penelitian ini hanya digunakan **3 kelas**, yaitu:
 
 - 🌿 Healthy
 - 🍂 Early Blight
 - 🍁 Late Blight
 
-Struktur dataset:
+Struktur dataset yang digunakan:
 
 ```text
 dataset/
 │
 ├── train/
-│   ├── Healthy
-│   ├── Early_blight
-│   └── Late_blight
+│   ├── Healthy/
+│   ├── Early_blight/
+│   └── Late_blight/
 │
 └── valid/
-    ├── Healthy
-    ├── Early_blight
-    └── Late_blight
+    ├── Healthy/
+    ├── Early_blight/
+    └── Late_blight/
+```
+
+**Sumber Dataset:**
+
+https://www.kaggle.com/datasets/arjuntejaswi/plant-village
+
 ```
 
 ---
