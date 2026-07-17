@@ -49,9 +49,9 @@ Dataset ini berisi lebih dari **20.000 citra daun tomat** yang terdiri atas **10
 
 Pada penelitian ini hanya digunakan **3 kelas**, yaitu:
 
-- 🌿 Healthy
-- 🍂 Early Blight
-- 🍁 Late Blight
+- Healthy
+- Early Blight
+- Late Blight
 
 Struktur dataset yang digunakan:
 
@@ -154,7 +154,6 @@ Model dievaluasi menggunakan beberapa metrik:
 - F1-Score
 - Confusion Matrix
 
-> **Hasil evaluasi akan ditambahkan setelah proses training selesai.**
 
 ---
 
