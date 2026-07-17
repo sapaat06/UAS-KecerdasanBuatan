@@ -209,16 +209,3 @@ pip install tensorflow matplotlib numpy pandas scikit-learn opencv-python
 **Tahun:** 2026
 
 ---
-
-## ⭐ Hasil Akhir
-
-Setelah training selesai, README ini akan diperbarui dengan:
-
-- 📷 Contoh dataset
-- 📊 Grafik Accuracy & Loss CNN
-- 📊 Grafik Accuracy & Loss MobileNetV2
-- 📈 Grafik perbandingan kedua model
-- 🔥 Confusion Matrix CNN
-- 🔥 Confusion Matrix MobileNetV2
-- 📋 Classification Report
-- 🏆 Model terbaik berdasarkan hasil evaluasi
