@@ -15,7 +15,6 @@ Proyek ini merupakan tugas akhir mata kuliah **Kecerdasan Buatan** yang bertujua
 - Tujuan Proyek
 - Dataset
 - Struktur Repository
-- Teknologi yang Digunakan
 - Metodologi
 - Model Deep Learning
 - Hasil Pengujian
