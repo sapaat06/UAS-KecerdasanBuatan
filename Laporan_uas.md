@@ -1,15 +1,14 @@
 
-# LAPORAN UJIAN AKHIR SEMESTER (UAS) KECERDASAN BUATAN MENGGUNAKAN AlGORITMA DEEP LEARNING
+# LAPORAN UJIAN AKHIR SEMESTER (UAS) KECERDASAN BUATAN MENGGUNAKAN AlGORITMA MACHINE LEARNING
 
 **Mata Kuliah:** Kecerdasan Buatan
 
 
-**Topik Proyek:** Klasifikasi Penyakit Daun Padi Menggunakan Arsitektur EfficientNetB0 dan MobileNetV2
+**Topik Proyek:** Deteksi Penyakit Daun Tomat Menggunakan CNN dan MobileNetV2
 
 **Anggota Kelompok:**
 
-1. YUSEP NURHOLIS 2406095
-2. Fugi Kusnaedi 2406088
+1. Sapaat 2406080
 
    
 **LINK dataset** : kaggle.com/datasets/nirmalsankalana/rice-leaf-disease-image
@@ -25,21 +24,22 @@
 
 ### Latar Belakang Masalah (Domain Proyek)
 
-Tanaman padi (_Oryza sativa_) adalah pilar utama ketahanan pangan nasional di Indonesia, mengingat mayoritas penduduk mengonsumsi nasi sebagai makanan pokok. Namun, produktivitas padi secara konsisten terancam oleh serangan berbagai macam patogen pembawa penyakit, seperti bakteri, jamur, dan virus. Tiga penyakit yang paling sering merusak daun padi meliputi _Bacterial Blight_ (Hawar Daun Bakteri), _Blast_ (Blas), dan _Brown Spot_ (Bercak Cokelat).
-
-Metode identifikasi konvensional yang mengandalkan pengamatan visual secara langsung oleh petani sering kali subjektif, lambat, dan rentan terhadap kesalahan diagnosis. Keterbatasan jumlah pakar atau penyuluh pertanian lapangan (PPL) memperparah kondisi ini, sehingga penanganan penyakit sering kali terlambat dilakukan. Keterlambatan ini berdampak fatal, mulai dari penurunan kualitas gabah hingga gagal panen total (_puso_). Oleh karena itu, diperlukan sistem cerdas berbasis _Artificial Intelligence_ (AI) yang mampu mengidentifikasi jenis penyakit tanaman padi secara instan, akurat, dan dapat diakses dari mana saja.
+Tanaman tomat (*Solanum lycopersicum*) merupakan salah satu komoditas hortikultura yang memiliki nilai ekonomi tinggi dan banyak dibudidayakan di Indonesia. Produktivitas tanaman tomat sangat dipengaruhi oleh kondisi kesehatan tanaman, terutama pada bagian daun yang berperan penting dalam proses fotosintesis. Salah satu faktor yang menyebabkan penurunan hasil panen adalah serangan penyakit daun, seperti **Early Blight** dan **Late Blight**. Kedua penyakit tersebut dapat menyebabkan kerusakan daun, menghambat pertumbuhan tanaman, serta menurunkan kualitas dan kuantitas hasil panen apabila tidak segera ditangani.
+Proses identifikasi penyakit daun tomat umumnya masih dilakukan secara manual melalui pengamatan visual oleh petani atau tenaga ahli. Metode ini membutuhkan pengalaman, waktu, dan ketelitian karena gejala antar penyakit sering kali memiliki kemiripan. Selain itu, tidak semua petani memiliki akses terhadap pakar pertanian sehingga proses diagnosis penyakit menjadi kurang efektif. Kondisi tersebut mendorong perlunya sistem yang mampu membantu proses identifikasi penyakit secara otomatis, cepat, dan akurat (Howard et al., 2017).
+Perkembangan teknologi **Artificial Intelligence (AI)**, khususnya **Deep Learning**, memberikan solusi dalam bidang klasifikasi citra. Salah satu metode yang banyak digunakan adalah **Convolutional Neural Network (CNN)** karena mampu mengekstraksi fitur citra secara otomatis dan menghasilkan performa klasifikasi yang baik. Selain itu, metode **Transfer Learning** menggunakan **MobileNetV2** juga menjadi pilihan karena memiliki jumlah parameter yang lebih ringan, waktu pelatihan yang lebih cepat, serta tetap mampu memberikan akurasi yang tinggi.
+Berdasarkan permasalahan tersebut, pada proyek ini dilakukan pembangunan model klasifikasi penyakit daun tomat menggunakan **CNN** dan **MobileNetV2**. Kedua model akan dibandingkan berdasarkan nilai **accuracy**, **loss**, **confusion matrix**, dan **classification report** untuk mengetahui model yang memiliki performa terbaik dalam mengklasifikasikan tiga kategori daun tomat, yaitu **Healthy**, **Early Blight**, dan **Late Blight** (Sandler et al., 2018).
 
 ### Permasalahan Dunia Nyata
 
-1. **Kesalahan Diagnosis:** Petani kesulitan membedakan gejala awal antara penyakit _Blast_ dan _Brown Spot_, yang berujung pada pemilihan jenis pestisida yang salah. Hal ini tidak hanya membuang biaya secara sia-sia melainkan juga merusak ekosistem lingkungan.
-2. **Keterbatasan Akses Pakar:** Proses konfirmasi penyakit melalui laboratorium agronomi memakan waktu berhari-hari, sementara penyebaran penyakit di sawah berlangsung dalam hitungan jam.
+1. **Kesalahan Diagnosis:** Petani sering mengalami kesulitan membedakan gejala awal antara penyakit **Early Blight** dan **Late Blight** karena keduanya memiliki karakteristik bercak yang hampir serupa. Kesalahan dalam mengidentifikasi penyakit dapat menyebabkan pemilihan jenis fungisida yang tidak tepat sehingga pengendalian penyakit menjadi kurang efektif dan berpotensi meningkatkan kerugian hasil panen.
+2. **Keterbatasan Akses Pakar:** Proses identifikasi penyakit masih bergantung pada pengamatan visual oleh petani atau tenaga ahli pertanian. Di beberapa daerah, akses terhadap pakar pertanian masih terbatas sehingga proses diagnosis membutuhkan waktu lebih lama. Akibatnya, penyakit dapat menyebar ke tanaman lain sebelum dilakukan penanganan yang tepat.
 
-### tujuan proyek
+### Tujuan Proyek
 
-1. **Mengembangkan Model Klasifikasi Otomatis:** Membangun dan mengimplementasikan model berbasis Deep Learning (Convolutional Neural Network) menggunakan arsitektur _EfficientNetB0_ dan _MobileNetV2_ untuk mendeteksi serta mengklasifikasikan jenis penyakit pada daun padi secari dini dan akurat.
-2. **Mengatasi Ketidakseimbangan Data (Class Imbalance):** Menerapkan strategi _Stratified Split_ dan pembobotan kelas (_class weight_) dalam proses training untuk memastikan model memiliki keadilan evaluasi (_fairness_) dan tidak bias terhadap kelas mayoritas.
-3. **Mengekstrak Karakteristik Visual Daun:** Memanfaatkan fitur statistik warna (RGB) dan pola spasial daun guna membedakan karakteristik fisik antara daun padi yang sehat dengan daun yang terinfeksi patogen.
-4. **Mencapai Target Performa Tinggi:** Menghasilkan model komparatif terbaik yang mampu mencapai tingkat akurasi pengujian (_Test Accuracy_) di atas 85%, serta memiliki nilai F1-Score yang stabil di setiap kelas penyakit guna meminimalkan risiko salah diagnosis di lapangan pertanian.
+1. **Mengembangkan Model Klasifikasi Otomatis:** Membangun dan mengimplementasikan model berbasis Deep Learning menggunakan arsitektur **Convolutional Neural Network (CNN)** dan **MobileNetV2** untuk mendeteksi serta mengklasifikasikan penyakit pada daun tomat ke dalam tiga kelas, yaitu **Healthy**, **Early Blight**, dan **Late Blight**.
+2. **Membandingkan Performa Dua Model Deep Learning:** Melakukan perbandingan performa model **CNN** dan **MobileNetV2** berdasarkan metrik evaluasi seperti **Accuracy**, **Loss**, **Confusion Matrix**, dan **Classification Report** untuk mengetahui model yang memiliki kinerja terbaik.
+3. **Mempelajari Karakteristik Visual Daun Tomat:** Memanfaatkan kemampuan Deep Learning dalam mengekstraksi fitur citra daun secara otomatis sehingga model mampu membedakan karakteristik visual antara daun tomat yang sehat dengan daun yang terinfeksi penyakit.
+4. **Mencapai Performa Klasifikasi yang Optimal:** Menghasilkan model klasifikasi dengan tingkat akurasi yang tinggi sehingga dapat digunakan sebagai dasar pengembangan sistem deteksi penyakit daun tomat yang cepat, akurat, dan efisien.
 
 ### Target Pengguna (User)
 
