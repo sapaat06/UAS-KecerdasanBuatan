@@ -88,7 +88,7 @@ UAS-KecerdasanBuatan/
 │
 ├── Laporan_uas.md
 ├── README.md
-└── UAS_KecerdasanBuatan_model_nn & CMobileNetV2.ipynb
+└── UAS_KecerdasanBuatan_Model_Cnn & MobileNetV2.ipynb
 ```
 
 ---
