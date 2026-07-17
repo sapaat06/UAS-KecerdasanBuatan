@@ -16,7 +16,7 @@
 
 ## 1. Judul Proyek
 
-**"Analisis Perbandingan Performa Arsitektur EfficientNetB0 dan MobileNetV2 Berbasis Transfer Learning untuk Deteksi Otomatis Multi-Kelas Penyakit Daun Padi (Oryza Sativa)"**
+# Analisis Perbandingan Performa Arsitektur Convolutional Neural Network (CNN) dan MobileNetV2 dalam Klasifikasi Multi-Kelas Penyakit Daun Tomat (Solanum lycopersicum)
 
 ---
 
