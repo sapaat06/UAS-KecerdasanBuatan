@@ -253,7 +253,6 @@ Berdasarkan grafik perbandingan hasil pelatihan, kedua model menunjukkan peningk
 
 > **Gambar 7.1 Perbandingan Accuracy CNN dan MobileNetV2**
 
-*(Masukkan grafik batang hasil notebook di sini.)*
 
 ## 3. Analisis Confusion Matrix
 
@@ -263,11 +262,9 @@ Melalui Confusion Matrix dapat diketahui kelas mana yang memiliki tingkat kesala
 
 > **Gambar 7.2 Confusion Matrix CNN**
 
-*(Masukkan hasil Confusion Matrix CNN.)*
 
 > **Gambar 7.3 Confusion Matrix MobileNetV2**
 
-*(Masukkan hasil Confusion Matrix MobileNetV2.)*
 
 ---
 
