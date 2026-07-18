@@ -76,51 +76,6 @@ https://www.kaggle.com/datasets/cookiefinder/tomato-disease-multiple-sources?utm
 
 --
 
-## 4. Exploratory Data Analysis (EDA)
-
-## Exploratory Data Analysis (EDA)
-
-Proses **Exploratory Data Analysis (EDA)** dilakukan untuk memahami karakteristik dataset sebelum memasuki tahap pemodelan. Tahapan EDA pada penelitian ini meliputi:
-
-### 1. Analisis Distribusi Kelas
-
-Analisis dilakukan dengan menghitung jumlah citra pada masing-masing kelas, yaitu **Healthy**, **Early Blight**, dan **Late Blight**. Tujuan dari analisis ini adalah untuk mengetahui distribusi jumlah data pada setiap kelas sehingga dapat diketahui apakah dataset memiliki distribusi yang seimbang. Hasil perhitungan kemudian divisualisasikan menggunakan **diagram lingkaran (pie chart)** untuk mempermudah interpretasi distribusi data.
-
-### 2. Visualisasi Sampel Citra
-
-Visualisasi dilakukan dengan menampilkan beberapa contoh citra dari setiap kelas. Tahap ini bertujuan untuk memahami karakteristik visual masing-masing kelas, seperti warna daun, bentuk bercak, dan pola kerusakan akibat penyakit. Dengan visualisasi ini dapat diketahui perbedaan karakteristik antara daun **Healthy**, **Early Blight**, dan **Late Blight**.
-
-### 3. Analisis Struktur Dataset
-
-Analisis dilakukan untuk memastikan bahwa dataset telah tersusun dengan baik sesuai kebutuhan proses pelatihan model. Dataset dibagi menjadi dua folder utama, yaitu **train** sebagai data pelatihan dan **valid** sebagai data validasi. Masing-masing folder terdiri atas tiga subfolder yang merepresentasikan kelas **Healthy**, **Early Blight**, dan **Late Blight**, sehingga dapat langsung digunakan menggunakan metode `flow_from_directory()` pada TensorFlow/Keras.
-
-<img width="704" height="419" alt="output" src="https://github.com/user-attachments/assets/b743110a-85ff-4933-b711-472d37e05d9c" />
-
-
-Grafik batang di atas menampilkan distribusi jumlah gambar setelah melewati tahap pembersihan data awal. Dataset menunjukkan kondisi yang sangat ideal (perfectly balanced dataset) di mana masing-masing dari empat kelas—yaitu Bacterial Blight, Blast, Brown Spot, dan Healthy—memiliki jumlah sampel yang sama persis, yaitu sebanyak 1.483 gambar per kelas. Keseimbangan data ini sangat menguntungkan proses pelatihan model Deep Learning karena menghilangkan risiko bias terhadap kelas tertentu, sehingga metrik akurasi yang dihasilkan nantinya akan bersifat objektif dan tepercaya tanpa perlu perlakuan khusus seperti oversampling atau undersampling
-
-
-
-<img width="491" height="374" alt="output" src="https://github.com/user-attachments/assets/62f8616d-1769-4690-af31-36372b326499" />
-
-
-
-Grafik heatmap di atas menunjukkan nilai koefisien korelasi Pearson antar saluran warna (Red, Green, Blue) dari seluruh piksel dataset daun padi. Terlihat nilai korelasi yang sangat kuat mendekati angka 1 (misalnya antara Red dan Green sebesar 0.98, serta Green dan Blue sebesar 0.95). Tingginya korelasi ini mengindikasikan adanya redundansi informasi warna yang tinggi pada citra alami daun. Bagi model CNN, pola korelasi ini menegaskan bahwa fitur bentuk geometris, tekstur bercak, dan gradasi spasial akan menjadi pembeda yang jauh lebih krusial bagi model dalam mengenali penyakit dibandingkan sekadar informasi warna murni individual.
-
-<img width="898" height="770" alt="output" src="https://github.com/user-attachments/assets/d7f54aa5-550d-4c4a-a59d-c977585ef49a" />
-
-
-
-Gambar di atas menampilkan grid visualisasi representatif dari masing-masing kelas penyakit daun padi yang digunakan untuk melatih model. Melalui sampel ini, kita dapat menganalisis karakteristik visual unik setiap kelas:
-
-**Bacterial Blight**: Menunjukkan gejala garis-garis layu memanjang berwarna kuning pucat hingga putih di sepanjang tepi daun.
-
-**Blast**: Ditandai dengan bercak berbentuk kornea/belah ketupat yang khas dengan bagian pusat berwarna abu-abu.
-
-**Brown Spot**: Memperlihatkan bercak-bercak bulat atau oval kecil berwarna cokelat pekat yang tersebar merata di permukaan daun.
-
-**Healthy**: Menampilkan daun padi sehat dengan warna hijau segar yang homogen tanpa bercak ataupun cacat fisik.
-
 # 4. Exploratory Data Analysis (EDA)
 
 Proses **Exploratory Data Analysis (EDA)** dilakukan untuk memahami karakteristik dataset sebelum memasuki tahap pemodelan. Tahapan EDA pada penelitian ini meliputi analisis distribusi kelas, visualisasi sampel citra, serta analisis struktur dataset.
@@ -129,13 +84,11 @@ Proses **Exploratory Data Analysis (EDA)** dilakukan untuk memahami karakteristi
 
 Analisis distribusi kelas dilakukan dengan menghitung jumlah citra pada masing-masing kelas, yaitu **Healthy**, **Early Blight**, dan **Late Blight**. Tujuan analisis ini adalah untuk mengetahui keseimbangan jumlah data yang digunakan pada proses pelatihan sehingga dapat meminimalkan kemungkinan model menjadi bias terhadap salah satu kelas.
 
-<p align="center">
-<img src="Gambar_Distribusi.png" width="650">
-</p>
 
-**Gambar 4.1 Distribusi Jumlah Citra pada Setiap Kelas**
+<img width="2113" height="1653" alt="Gambar_Distribusi (2)" src="https://github.com/user-attachments/assets/5daf5406-d176-4abd-b5ee-627a81a7a633" />
 
 Grafik batang di atas menunjukkan jumlah citra pada masing-masing kelas yang digunakan dalam penelitian. Berdasarkan hasil visualisasi, distribusi data antar kelas relatif seimbang sehingga dataset dinilai cukup baik untuk digunakan pada proses pelatihan model **CNN** dan **MobileNetV2**. Keseimbangan jumlah data tersebut membantu model mempelajari karakteristik setiap kelas secara lebih merata dan mengurangi kemungkinan terjadinya bias klasifikasi.
+nih kata katanya di ubah gak
 
 ---
 
@@ -143,11 +96,9 @@ Grafik batang di atas menunjukkan jumlah citra pada masing-masing kelas yang dig
 
 Visualisasi sampel citra dilakukan untuk melihat karakteristik visual dari setiap kelas penyakit daun tomat. Tahap ini membantu memahami perbedaan pola bercak, warna daun, serta tingkat kerusakan yang menjadi ciri khas masing-masing penyakit.
 
-<p align="center">
-<img src="Gambar_Sampel.png" width="800">
-</p>
 
-**Gambar 4.2 Contoh Citra Setiap Kelas**
+<img width="1187" height="407" alt="Screenshot 2026-07-18 192449" src="https://github.com/user-attachments/assets/a4c6b469-61fd-4b5d-bd49-5c11f2176a56" />
+
 
 Berdasarkan gambar di atas, setiap kelas memiliki karakteristik visual yang berbeda.
 
@@ -157,9 +108,23 @@ Berdasarkan gambar di atas, setiap kelas memiliki karakteristik visual yang berb
 
 Perbedaan karakteristik visual tersebut menjadi informasi penting yang dipelajari oleh model Deep Learning untuk membedakan setiap kelas penyakit secara otomatis.
 
+## 4.3 Analisis Struktur Dataset
+
+Visualisasi pairplot digunakan untuk menganalisis distribusi nilai warna Red (R), Green (G), dan Blue (B) pada setiap kelas penyakit daun tomat. Analisis ini bertujuan untuk mengetahui karakteristik warna yang dimiliki masing-masing kelas serta hubungan antar kanal warna yang dapat dimanfaatkan oleh model dalam proses klasifikasi.
+
+<img width="2667" height="2301" alt="Pairplot_Daun_Tomat" src="https://github.com/user-attachments/assets/174a5ae9-c5fa-4a54-8ba1-79f180c7cd63" />
+
+Berdasarkan visualisasi pairplot di atas, dapat diamati beberapa karakteristik sebagai berikut.
+
+Healthy memiliki distribusi nilai warna yang cenderung lebih tinggi pada kanal hijau (Green), mencerminkan warna daun yang masih segar dan sehat.
+Early Blight menunjukkan variasi distribusi warna yang dipengaruhi oleh munculnya bercak cokelat pada permukaan daun sehingga nilai kanal merah (Red) dan hijau (Green) mengalami perubahan dibandingkan daun sehat.
+Late Blight memperlihatkan penyebaran nilai warna yang lebih luas akibat kerusakan jaringan daun yang lebih parah, sehingga komposisi warna menjadi lebih beragam.
+
+Selain itu, terlihat adanya hubungan positif antara kanal Red, Green, dan Blue, yang menunjukkan bahwa perubahan intensitas pada satu kanal warna umumnya diikuti oleh perubahan pada kanal warna lainnya. Informasi distribusi warna tersebut menjadi salah satu karakteristik visual yang dipelajari oleh model CNN maupun MobileNetV2 dalam membedakan setiap kelas penyakit daun tomat.
+
 ---
 
-## 4.3 Analisis Struktur Dataset
+## 4.4 Analisis Struktur Dataset
 
 Dataset yang digunakan telah disusun ke dalam dua folder utama, yaitu **train** dan **valid**. Folder **train** digunakan sebagai data pelatihan model, sedangkan folder **valid** digunakan sebagai data validasi selama proses training. Masing-masing folder terdiri atas tiga subfolder yang merepresentasikan kelas **Healthy**, **Early Blight**, dan **Late Blight**. Struktur dataset tersebut memungkinkan proses pemuatan data dilakukan secara otomatis menggunakan fungsi `flow_from_directory()` pada TensorFlow/Keras sehingga mempermudah proses pelatihan model.
 
@@ -251,7 +216,10 @@ Tabel di atas menyajikan hasil evaluasi kedua model berdasarkan metrik **Accurac
 
 Berdasarkan grafik perbandingan hasil pelatihan, kedua model menunjukkan peningkatan nilai **accuracy** dan penurunan **loss** selama proses training. Selain itu, dilakukan visualisasi grafik perbandingan akurasi akhir antara **CNN** dan **MobileNetV2** sehingga perbedaan performa kedua model dapat diamati dengan lebih jelas. Model dengan nilai akurasi lebih tinggi dapat dianggap memiliki kemampuan klasifikasi yang lebih baik pada dataset yang digunakan.
 
-> **Gambar 7.1 Perbandingan Accuracy CNN dan MobileNetV2**
+<img width="672" height="557" alt="Screenshot 2026-07-18 193515" src="https://github.com/user-attachments/assets/07982031-9b95-46fd-adac-5ad9a01739c7" />
+<img width="771" height="563" alt="Screenshot 2026-07-18 194737" src="https://github.com/user-attachments/assets/b4b24d4c-db71-4d85-a960-c9c3cfa7e2d9" />
+<img width="857" height="562" alt="Screenshot 2026-07-18 193946" src="https://github.com/user-attachments/assets/736bcc69-78f0-4abe-9057-fdadc7eb4645" />
+
 
 
 ## 3. Analisis Confusion Matrix
@@ -260,10 +228,10 @@ Confusion Matrix digunakan untuk melihat jumlah prediksi yang benar maupun salah
 
 Melalui Confusion Matrix dapat diketahui kelas mana yang memiliki tingkat kesalahan prediksi paling tinggi serta pasangan kelas yang sering mengalami kekeliruan. Informasi tersebut menjadi dasar dalam mengevaluasi kemampuan model dalam membedakan karakteristik visual dari masing-masing penyakit daun tomat.
 
-> **Gambar 7.2 Confusion Matrix CNN**
+<img width="700" height="700" alt="Gambar_Distribusi (5)" src="https://github.com/user-attachments/assets/0ff1143a-21b7-4f9b-b49a-641d6cdd2dab" />
 
 
-> **Gambar 7.3 Confusion Matrix MobileNetV2**
+<img width="812" height="707" alt="Screenshot 2026-07-18 193759" src="https://github.com/user-attachments/assets/b91912dc-d346-4d9a-9ab0-a9fecc43663d" />
 
 
 ---
@@ -305,5 +273,5 @@ Melalui Confusion Matrix dapat diketahui kelas mana yang memiliki tingkat kesala
 7. Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press.
 
 ---
-## 10. Lampiran 
+
 
